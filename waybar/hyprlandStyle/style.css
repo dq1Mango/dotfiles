@@ -17,21 +17,19 @@
 }*/
 
   border-radius: 10px;
-  border: 2px solid @lavender
+  border: 2px solid @surface1
   /*margin: 1rem 1rem;*/
 }
 
 #workspaces {
   border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface0;
   margin-left: 1rem;
 }
 
 #workspaces button {
   color: @lavender;
   border-radius: 1rem;
-  padding: 0.4rem;
+  /*padding: 0.4rem;*/
 }
 
 #workspaces button.active {
@@ -44,25 +42,62 @@
   border-radius: 1rem;
 }
 
+#workspaces,
 #custom-music,
-#tray,
 #backlight,
 #clock,
+#pulseaudio,
+#pulseaudio-slider,
 #battery,
 #pulseaudio,
-#custom-lock,
-#custom-power {
-  background-color: @surface0;
-  padding: 0.5rem 1rem;
-  margin: 5px 0;
+#network,
+#cpu,
+#memory{
+  background-color: transparent;
+  border: 2px solid @lavender;
+  border-radius: 1rem;
+  padding: 1px 20px;
+  margin: 14px 20px;
 }
 
-#clock {
-  color: @blue;
-  border-radius: 1rem 1rem 1rem 1rem;
-  margin-right: 1rem;
+#clock.cal {
+  margin-left:30px;
 }
 
+#pulseaudio {
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+  margin-right: 0px;
+  padding-right: 0px;
+  border-right: none;
+}
+
+#pulseaudio-slider {
+  border-radius: 0rem 1rem 1rem 0rem;
+  margin-left: 0px;
+  border-left: none;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    border: none; 
+    background-color: @crust;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: @green;
+}
 #cpu {
   /*color: @blue;
   border-radius: 0px 1rem 1rem 0px;
@@ -90,29 +125,10 @@
     border-radius: 0;
 }
 
-#pulseaudio {
-  color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
-}
+
 
 #custom-music {
   color: @mauve;
   border-radius: 1rem;
 }
 
-#custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
-}
-
-#custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
-}

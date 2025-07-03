@@ -1,17 +1,15 @@
-@import "mochaColors.css";
-
 * {
   font-family: 'Inconsolata Nerd Font', monospace;
   font-size: 14px;
 }
 
 /* Window */
-#window {
+window {
   margin: 0px;
   padding: 10px;
   border: 0.16em solid #b4befe;
-  border-radius: 10px;
-  background-color: rgba(30, 30, 46, 0.7);
+  border-radius: 0.1em;
+  background-color: alpha(#1e1e2e, 0.7);
   animation: slideIn 0.5s ease-in-out both;
 }
 
@@ -31,7 +29,7 @@
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: transparent;
+  background-color: #1e1e2e;
   animation: fadeIn 0.5s ease-in-out both;
 }
 
@@ -51,8 +49,15 @@
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: transparent;
+  /*background-color: #1e1e2e;*/
+}
 
+/* Scroll */
+#scroll {
+  margin: 0px;
+  padding: 10px;
+  border: none;
+  background-color: #1e1e2e;
 }
 
 /* Input */
@@ -62,7 +67,7 @@
   border: none;
   border-radius: 0.1em;
   color: #cdd6f4;
-  background-color: transparent;
+  background-color: #1e1e2e;
   animation: fadeIn 0.5s ease-in-out both;
 }
 
@@ -84,13 +89,12 @@
 }
 
 #entry {
-  background-color: transparent;
+  background-color: #1e1e2e;
 }
 
 #entry arrow {
   border: none;
   color: #b4befe;
-  background-color: transparent;
 }
 
 /* Selected Entry */

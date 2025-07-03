@@ -2,14 +2,14 @@
   "layer": "top",
   "position": "bottom",
   "reload_style_on_change": true,
-  "modules-left": ["clock#cal", "clock", "tray"],
+  "modules-left": ["clock#cal", "clock", "pulseaudio", "pulseaudio/slider"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["network", "cpu", "memory", "temperature"],
   "margin-top": 0,
   "margin-left": 20,
   "margin-bottom": 10,
   "margin-right": 20,
-  "spacing": 20,
+  //"spacing": 20,
 
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -44,6 +44,11 @@
       "on-click": "shift_up",
     },
   },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+  },
   "network": {
     "interface": "enp42s0",
     "format": "{ifname}",
@@ -56,15 +61,6 @@
     "max-length": 50,
     "spacing": 100,
   },
-  "custom/expand": {
-    "format": "",
-    "tooltip": false,
-  },
-  "custom/endpoint": {
-    "format": "|",
-    "tooltip": false,
-  },
-
   "custom/colorpicker": {
     "format": "{}",
     "return-type": "json",
