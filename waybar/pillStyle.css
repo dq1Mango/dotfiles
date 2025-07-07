@@ -36,33 +36,67 @@
   border-radius: 1rem;
 }
   
-#workspaces,
-#network,
-#memory,
-#custom-music,
-#clock,
-#cpu,
-#battery,
-#pulseaudio,
-#custom-power {
+#workspaces, #network, #memory, #custom-music, #clock, #cpu, #battery, #pulseaudio, #pulseaudio-slider {
   background-color: alpha(@base, 0.7);
   padding: 5px 20px;
   border: 2px solid @surface1;
   border-radius: 20px;
+  padding: 2px 20px;
+  margin: 0px 20px;
+
   /*margin: 5px 0;*/
 }
 
+#network.focused {
+  border: 2px solid @maroon;
+}
+
+#clock.cal {
+  margin-left: 0px;
+}
+
+#memory {
+  margin-right:0px
+}
+
+#pulseaudio {
+  color: @maroon;
+  margin-right: 0px;
+  border-radius: 20px 0px 0px 20px;
+  border-right: none;
+}
+
+#pulseaudio-slider {
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 30px;
+  border-radius: 0rem 20px 20px 0rem;
+  border-left: none;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    border: none; 
+    background-color: @crust;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: @green;
+}
 /*#clock {
   border-radius: 1rem 1rem 1rem 1rem;
   margin-right: 1rem;
 }*/
 
-#cpu {
-  /*color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
-  background-color: @surface0;*/
-}
 
 #battery {
   color: @green;
@@ -86,7 +120,6 @@
 
 #pulseaudio {
   color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
 }
 
@@ -95,18 +128,3 @@
   border-radius: 1rem;
 }
 
-#custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
-}
-
-#custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
-}

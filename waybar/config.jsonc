@@ -70,7 +70,7 @@
     "signal": 1,
   },
   "cpu": {
-    "format": "{load}/{usage}%",
+    "format": "{load} - {usage}%",
   },
   "memory": {
     "interval": 30,
