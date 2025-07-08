@@ -10,8 +10,10 @@ end
 handle:close()
 
 local papers = {}
-for i in string.gmatch(result, "%S+") do
-	table.insert(papers, i)
+for name in string.gmatch(result, "%S+") do
+	if name ~= "wallpaper" then
+		table.insert(papers, name)
+	end
 end
 
 --handle = io.open("~/.config/hypr/index.md")
@@ -64,5 +66,6 @@ index = (index % #papers) + 1
 --os.execute('hyprctl hyprpaper reload ",' .. directory .. papers[index] .. '"')
 
 os.execute('hyprctl hyprpaper wallpaper ",' .. next .. '"')
+os.execute("ln -sf " .. next .. " " .. directory .. "wallpaper")
 os.execute("hyprctl hyprpaper unload all")
 os.execute('hyprctl hyprpaper preload "' .. directory .. papers[index] .. '"')

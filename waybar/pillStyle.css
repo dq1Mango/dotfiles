@@ -39,7 +39,7 @@
 #workspaces, #network, #memory, #custom-music, #clock, #cpu, #battery, #pulseaudio, #pulseaudio-slider {
   background-color: alpha(@base, 0.7);
   padding: 5px 20px;
-  border: 2px solid @surface1;
+  border: 2px solid @lavender;
   border-radius: 20px;
   padding: 2px 20px;
   margin: 0px 20px;
