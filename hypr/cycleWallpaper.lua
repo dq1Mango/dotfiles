@@ -33,29 +33,46 @@ else
 	os.exit()
 end
 
-local loaded = {}
--- Basically only for startup or if something goes terribly wrong
-if result == "no wallpapers loaded\n" then
-	print("staring up ..")
-	os.execute('hyprctl hyprpaper reload ",' .. directory .. papers[1] .. '"')
-	os.execute('hyprctl hyprpaper preload "' .. directory .. papers[1 % #papers + 1] .. '"')
-	os.exit()
-	--hope you have at least 2 files in ur wallpapers
+function getIndex(name)
+	for i, j in pairs(papers) do
+		if directory .. j == name then
+			return i
+		end
+	end
+
+	return nil
 end
 
+-- Basically only for startup or if something goes terribly wrong
+if result == "no wallpapers loaded\n" then
+	print("starting up ..")
+
+	handle = io.popen("readlink -f " .. directory .. "wallpaper")
+	if handle ~= nil then
+		os.execute('hyprctl hyprpaper reload ",' .. directory .. 'wallpaper"')
+		os.execute("hyprctl hyprpaper unload all")
+		os.execute( -- pretty fire oneliner
+			'hyprctl hyprpaper preload "'
+				.. directory
+				.. papers[getIndex(string.gsub(handle:read("*a"), "%s+", "")) % #papers + 1]
+				.. '"'
+		)
+	else
+		print("smthn has gone very wrong even tho no one will see this error ever")
+	end
+	handle:close()
+	os.exit()
+	--hope you have at least 2 files in ur wallpapers directory
+end
+
+local loaded = {}
 for i in string.gmatch(result, "%S+") do
 	table.insert(loaded, i)
 end
 
 local next = loaded[1]
 
-local index
-for i, j in pairs(papers) do
-	if directory .. j == next then
-		index = i
-		break
-	end
-end
+local index = getIndex(next)
 
 if index == nil then
 	index = #papers
