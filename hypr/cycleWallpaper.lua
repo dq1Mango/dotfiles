@@ -24,7 +24,7 @@ end
 --end
 --
 --local next = result:gsub("%s+", "")
-
+os.execute("hyprctl hyprpaper listloaded > ~/.config/hypr/log.txt")
 handle = io.popen("hyprctl hyprpaper listloaded")
 if handle ~= nil then
 	result = handle:read("*a")
