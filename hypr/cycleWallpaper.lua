@@ -11,20 +11,11 @@ handle:close()
 
 local papers = {}
 for name in string.gmatch(result, "%S+") do
-	if name ~= "wallpaper" then
+	if name ~= "wallpaper" and name ~= "nextpaper" then
 		table.insert(papers, name)
 	end
 end
 
---handle = io.open("~/.config/hypr/index.md")
---if handle ~= nil then
---	result = handle:read("*a")
---else
---	print("cannot read index file")
---end
---
---local next = result:gsub("%s+", "")
-os.execute("hyprctl hyprpaper listloaded > ~/.config/hypr/log.txt")
 handle = io.popen("hyprctl hyprpaper listloaded")
 if handle ~= nil then
 	result = handle:read("*a")
@@ -50,7 +41,6 @@ if result == "no wallpapers loaded\n" then
 	handle = io.popen("readlink -f " .. directory .. "wallpaper")
 	if handle ~= nil then
 		os.execute('hyprctl hyprpaper reload ",' .. directory .. 'wallpaper"')
-		os.execute("hyprctl hyprpaper unload all")
 		os.execute( -- pretty fire oneliner
 			'hyprctl hyprpaper preload "'
 				.. directory
@@ -65,14 +55,18 @@ if result == "no wallpapers loaded\n" then
 	--hope you have at least 2 files in ur wallpapers directory
 end
 
-local loaded = {}
-for i in string.gmatch(result, "%S+") do
-	table.insert(loaded, i)
+local loaded
+
+handle = io.popen("readlink -f " .. directory .. "nextpaper")
+if handle ~= nil then
+	loaded = handle:read()
+else
+	print("smthn has gone wrong and i dont have time to fix it")
 end
 
-local next = loaded[1]
+print(loaded)
 
-local index = getIndex(next)
+local index = getIndex(loaded)
 
 if index == nil then
 	index = #papers
@@ -81,8 +75,10 @@ end
 -- so weird arrays start at [1]
 index = (index % #papers) + 1
 --os.execute('hyprctl hyprpaper reload ",' .. directory .. papers[index] .. '"')
+print(papers[index])
 
-os.execute('hyprctl hyprpaper wallpaper ",' .. next .. '"')
-os.execute("ln -sf " .. next .. " " .. directory .. "wallpaper")
+os.execute('hyprctl hyprpaper wallpaper ",' .. directory .. 'nextpaper"')
+os.execute("ln -sf " .. loaded .. " " .. directory .. "wallpaper")
 os.execute("hyprctl hyprpaper unload all")
-os.execute('hyprctl hyprpaper preload "' .. directory .. papers[index] .. '"')
+os.execute("ln -sf " .. directory .. papers[index] .. " " .. directory .. "nextpaper")
+os.execute("hyprctl hyprpaper preload " .. directory .. "nextpaper")
