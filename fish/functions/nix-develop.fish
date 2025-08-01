@@ -1,7 +1,11 @@
+function nix-shell
+  nix-shell --run $SHELL $argv
+end
+
 function nix
-    if $1 == develop
-        nix develop -c $SHELL "$1"
+    if $argv[0] == develop
+        command nix develop -c $SHELL "$1"
     else
-        nix "$argv"
+        command nix $argv
     end
 end
