@@ -3,8 +3,8 @@ function nix-shell
 end
 
 function nix
-    if $argv[0] == develop
-        command nix develop -c $SHELL "$1"
+    if test $argv[1] = develop
+        command nix develop -c $SHELL $argv[2 .. ]
     else
         command nix $argv
     end
