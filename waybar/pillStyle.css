@@ -2,7 +2,7 @@
 
 * {
   /*font-family: DejaVuSansM Nerd Font;*/
-  font-size: 17px;
+  font-size: 16px;
   min-height: 0;
 }
 
@@ -41,14 +41,15 @@
   
 #workspaces, #network, #memory, #custom-music, #clock, #cpu, #battery, #pulseaudio, #pulseaudio-slider, #temperature {
   background-color: alpha(@base, 0.7);
-  padding: 5px 20px;
   border: 2px solid @lavender;
   border-radius: 20px;
-  padding: 2px 20px;
-  margin: 0px 20px;
+  padding: 2px 10px 2px 15px;
+  margin: 0px 5px;
 
   /*margin: 5px 0;*/
 }
+
+#
 
 #network.focused {
   border: 2px solid @maroon;
@@ -62,7 +63,7 @@
   margin-right:0px
 }
 
-#pulseaudio {
+/*#pulseaudio {
   color: @maroon;
   margin-right: 0px;
   border-radius: 20px 0px 0px 20px;
@@ -85,7 +86,7 @@
 }
 #pulseaudio-slider trough {
     min-height: 10px;
-    min-width: 80px;
+    min-width: 40px;
     border-radius: 5px;
     border: none; 
     background-color: @crust;
@@ -94,7 +95,7 @@
     min-width: 10px;
     border-radius: 5px;
     background-color: @green;
-}
+}*/
 /*#clock {
   border-radius: 1rem 1rem 1rem 1rem;
   margin-right: 1rem;
@@ -102,7 +103,7 @@
 
 
 #battery {
-  color: @green;
+  color: @text;
 }
 
 #battery.charging {
@@ -115,15 +116,6 @@
 
 #backlight {
   color: @yellow;
-}
-
-#backlight, #battery {
-    border-radius: 0;
-}
-
-#pulseaudio {
-  color: @maroon;
-  margin-left: 1rem;
 }
 
 #custom-music {

@@ -1,4 +1,4 @@
-local directory = "/home/dq1mango/Pictures/wallpapers/"
+local directory = "/home/mqngo/Pictures/wallpapers/"
 
 local handle = io.popen("ls " .. directory)
 if handle ~= nil then
@@ -64,8 +64,6 @@ else
 	print("smthn has gone wrong and i dont have time to fix it")
 end
 
-print(loaded)
-
 local index = getIndex(loaded)
 
 if index == nil then
@@ -75,7 +73,6 @@ end
 -- so weird arrays start at [1]
 index = (index % #papers) + 1
 --os.execute('hyprctl hyprpaper reload ",' .. directory .. papers[index] .. '"')
-print(papers[index])
 
 os.execute('hyprctl hyprpaper wallpaper ",' .. directory .. 'nextpaper"')
 os.execute("ln -sf " .. loaded .. " " .. directory .. "wallpaper")
