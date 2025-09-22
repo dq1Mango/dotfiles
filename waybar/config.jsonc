@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "bottom",
   "reload_style_on_change": true,
-  "modules-left": ["clock#cal", "clock", "pulseaudio", "network"],
+  "modules-left": ["clock", "pulseaudio", "network"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["battery", "cpu", "temperature", "memory"],
   "margin-top": 0,
@@ -78,7 +78,7 @@
   "network": {
     "interface": "wlo1",
     "format": "󱚵",
-    "format-wifi": "{bandwidthTotalBits} ({signaldBm}dBm) ",
+    "format-wifi": "{bandwidthTotalBits} ({signalStrength}%) ",
     "format-ethernet": "{bandwidthUpBits} - {bandwidthDownBits} 󰊗 ",
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) 󰖩",
@@ -87,14 +87,14 @@
     "max-length": 50,
     "spacing": 100,
   },
-  "custom/colorpicker": {
+  /*"custom/colorpicker": {
     "format": "{}",
     "return-type": "json",
     "interval": "once",
     "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
     "on-click": "~/.config/waybar/scripts/colorpicker.sh",
     "signal": 1,
-  },
+  },*/
   "cpu": {
     "format": "{load} - {usage}% ",
   },
@@ -104,7 +104,7 @@
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-    "critical-threshold": 80,
+    "critical-threshold": 60,
     "format": "{temperatureC}°C ",
   },
 }
