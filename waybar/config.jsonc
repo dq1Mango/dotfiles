@@ -1,110 +1,79 @@
 {
-  "layer": "top",
-  "position": "bottom",
-  "reload_style_on_change": true,
-  "modules-left": ["clock", "pulseaudio", "network"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["battery", "cpu", "temperature", "memory"],
-  "margin-top": 0,
-  "margin-left": 20,
-  "margin-bottom": 10,
-  "margin-right": 20,
-  //"spacing": 20,
+  "include": [
+    "~/.config/waybar/modules/*.jsonc",
+    "~/.config/waybar/modules/custom/*.jsonc",
+    "~/.config/waybar/modules/hyprland/*.jsonc",
 
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "active": "",
-      "default": "",
-      "empty": "",
-    },
-  },
-  /*"custom/notification": {
-    "tooltip": false,
-    "format": "",
-    "on-click": "swaync-client -t -sw",
-    "escape": true,
-  },*/
-  "clock#cal": {
-    "format": "{:%m-%d-%Y} ",
-    "interval": 1,
-    "actions": {
-      "on-click-right": "shift_down",
-      "on-click": "shift_up",
-    },
-  },
-  "clock": {
-    "format": "{:%H:%M:%S} ",
-    "interval": 1,
-    "actions": {
-      "on-click-right": "shift_down",
-      "on-click": "shift_up",
-    },
-  },
-  "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon}",
-    "format-muted": "",
-    "format-icons": {
-      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
-      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
-      "headphone": "",
-      "phone": "",
-      "phone-muted": "",
-      "portable": "",
-      "car": "",
-      "default": ["", ""],
-    },
-    "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"],
-  },
-  "pulseaudio/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal",
-  },
-  "battery": {
-    "bat": "BAT0",
-    "interval": 60,
-    "states": {
-      "warning": 30,
-      "critical": 15,
-    },
-    "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""],
-    "max-length": 25,
-  },
-  "network": {
-    "interface": "wlo1",
-    "format": "󱚵",
-    "format-wifi": "{bandwidthTotalBits} ({signalStrength}%) ",
-    "format-ethernet": "{bandwidthUpBits} - {bandwidthDownBits} 󰊗 ",
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) 󰖩",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
-    "spacing": 100,
-  },
-  /*"custom/colorpicker": {
-    "format": "{}",
-    "return-type": "json",
-    "interval": "once",
-    "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
-    "on-click": "~/.config/waybar/scripts/colorpicker.sh",
-    "signal": 1,
-  },*/
-  "cpu": {
-    "format": "{load} - {usage}% ",
-  },
-  "memory": {
-    "interval": 5,
-    "format": "{used:0.1f}G/{total:0.1f}G ",
-  },
-  "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-    "critical-threshold": 60,
-    "format": "{temperatureC}°C ",
-  },
+    // modules that are not included by default:
+    "~/.config/waybar/modules/extras/*.jsonc",
+  ],
+
+  /*------------
+		layout
+	------------*/
+
+  "modules-left": [
+    "group/theme_switcher",
+    "custom/left_div#1",
+    "hyprland/workspaces",
+    "custom/right_div#1",
+  ],
+  "modules-center": [
+    "hyprland/windowcount",
+    "custom/left_div#2",
+    "temperature",
+    "custom/left_div#3",
+    "memory",
+    "custom/left_div#4",
+    "cpu",
+    "custom/left_inv#1",
+    "custom/left_div#5",
+    "custom/distro",
+    "custom/right_div#2",
+    "custom/right_inv#1",
+    "idle_inhibitor",
+    "clock#time",
+    "custom/right_div#3",
+    "clock#date",
+    "custom/right_div#4",
+    "network",
+    "bluetooth",
+    "custom/right_div#5",
+  ],
+  "modules-right": [
+    "custom/left_div#6",
+    "group/pulseaudio",
+    "custom/left_div#7",
+    "backlight",
+    "custom/left_div#8",
+    "battery",
+    "custom/left_inv#2",
+    "custom/power_menu",
+  ],
+
+  /*-------------
+		options
+	-------------*/
+
+  "layer": "top",
+  // "output":
+  "position": "bottom",
+  "height": 0,
+  "width": 0,
+  "margin": 0,
+  // "margin-top":
+  //"margin-left": 10,
+  //"margin-bottom": 10,
+  //"margin-right": 10,
+  //"spacing": 0,
+  // "name":
+  "mode": "dock",
+  // "start_hidden":
+  // "modifier-reset":
+  // "exclusive":
+  // "fixed-center":
+  // "passthrough":
+  // "ipc":
+  // "id":
+  "reload_style_on_change": true,
 }
