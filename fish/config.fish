@@ -21,6 +21,9 @@ for func in $(ls $path)
     source "$path$func" # im starting to like this whole fish thing
 end
 
+# enable vim keybindings
+fish_vi_key_bindings
+
 # load starship
 starship init fish | source
 

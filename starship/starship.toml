@@ -30,6 +30,7 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+style = "bold purple"
 
 [docker_context]
 symbol = " "
@@ -51,6 +52,7 @@ symbol = "  "
 
 [git_branch]
 symbol = " "
+style = 'bold cyan'
 
 [git_commit]
 tag_symbol = '  '
@@ -136,7 +138,6 @@ NixOS = " "
 Nobara = " "
 OpenBSD = "󰈺 "
 openSUSE = " "
-OracleLinux = "󰌷 "
 Pop = " "
 Raspbian = " "
 Redhat = " "
@@ -148,7 +149,6 @@ SUSE = " "
 Ubuntu = " "
 Unknown = " "
 Void = " "
-Windows = "󰍲 "
 
 [package]
 symbol = "󰏗 "
