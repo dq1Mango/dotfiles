@@ -11,7 +11,7 @@
   padding: 10px;
   border: 0.16em solid #b4befe;
   border-radius: 10px;
-  background-color: rgba(30, 30, 46, 0.7);
+  background-color: rgba(30, 30, 46, 1);
   animation: slideIn 0.5s ease-in-out both;
 }
 

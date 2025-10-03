@@ -19,3 +19,6 @@ systemd/
 user-dirs.dirs
 user-dirs.locale
 xdg-terminals.list
+vlc/
+tigervnc/
+kde.org/
