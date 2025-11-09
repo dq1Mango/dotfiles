@@ -6,6 +6,7 @@ set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
 
 # additions to path 
 fish_add_path ~/.scripts/
+fish_add_path ~/.cargo/bin/
 
 # command aliases
 # 
