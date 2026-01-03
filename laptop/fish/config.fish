@@ -8,6 +8,10 @@ set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
 fish_add_path ~/.scripts/
 fish_add_path ~/.cargo/bin/
 
+# fish_add_path ~/Coding/V/vls/
+# fish_add_path ~/Coding/V/v/
+fish_add_path ~/.thingsIWantOnPath/
+
 # command aliases
 # 
 # mostly handled by shells.nix
