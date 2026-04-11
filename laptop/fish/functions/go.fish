@@ -1,7 +1,8 @@
-function go 
+function go
     if test run = $argv[1] -a run = $argv[-1]
-      command go run *.go
+        # shhhhhh
+        command go build
     else
-      command go $argv
+        command go $argv
     end
 end
