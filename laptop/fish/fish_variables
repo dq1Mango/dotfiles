@@ -1,7 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export GTK_THEME:catppuccin\x2dmocha\x2dlavender\x2dstandard\x2bdefault/
-SETUVAR --export NIXPKGS:/home/mqngo/Documents/flakes/signal\x2ddesktop
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:\x1d
 <<<<<<< HEAD
