@@ -1,5 +1,5 @@
 # enviroment variables
-set -gx GTK_THEME catppuccin-mocha-lavender-standard+default
+# set -gx GTK_THEME catppuccin-mocha-lavender-standard+default
 set -gx tabsize 2
 
 set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
