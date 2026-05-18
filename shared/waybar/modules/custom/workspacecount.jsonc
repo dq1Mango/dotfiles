@@ -1,0 +1,13 @@
+{
+  "custom/workspacecount": {
+    "exec": "~/.config/waybar/scripts/workspaces.sh",
+    "format": "[{}]",
+    // "format-empty":
+    // "format-windowed":
+    // "format-fullscreen":
+    // "separate-outputs":
+    // "min-length":
+    // "max-length":
+    "swap-icon-label": false,
+  },
+}

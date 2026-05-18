@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-# SETUVAR --export GTK_THEME:catppuccin\x2dmocha\x2dlavender\x2dstandard\x2bdefault/
-SETUVAR __fish_initialized:4300
+SETUVAR __fish_initialized:3800
 SETUVAR fish_greeting:\x1d
-SETUVAR fish_user_paths:/home/mqngo/\x2elocal/bin\x1e/home/mqngo/\x2ethingsIWantOnPath\x1e/home/dq1mango/\x2ecargo/bin\x1e/home/mqngo/\x2ecargo/bin\x1e/home/mqngo/\x2escripts\x1e/home/dq1mango/\x2escripts
+SETUVAR fish_user_paths:/root/\x2elocal/bin\x1e/home/mqngo/\x2elocal/bin\x1e/home/mqngo/\x2ethingsIWantOnPath\x1e/home/dq1mango/\x2ecargo/bin\x1e/home/mqngo/\x2ecargo/bin\x1e/home/mqngo/\x2escripts\x1e/home/dq1mango/\x2escripts

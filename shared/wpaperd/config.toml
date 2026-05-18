@@ -1,0 +1,198 @@
+[default]
+path = "/home/mqngo/Pictures/wallpapers/"
+# duration = "30m"
+sorting = "random"
+
+[default.transition.colour-distance]
+# default values for hexagonalize
+# steps = 50
+# horizontal-hexagons = 20.0
+
+# transitions
+# book-flip (2000)
+# bounce (4000):
+#
+#     shadow-colour: [0.0, 0.0, 0.0, 0.6]
+#     shadow-height: 0.075
+#
+#     bounces: 3.0
+#
+# bow-tie-horizontal (1500)
+# bow-tie-vertical (1500)
+# butterfly-wave-scrawler (2000):
+#
+#     amplitude: 1.0
+#     waves: 30.0
+#     color-separation: 0.3
+#
+# circle (3000)
+# circle-crop (3000)
+#
+#     bgcolor: [0.0, 0.0, 0.0, 1.0]
+#
+# circle-open (1500):
+#
+#     smoothness: 0.3
+#     opening: true
+#
+# colour-distance (2000):
+#
+#     power: 5.0
+#
+# cross-warp (1000):
+# cross-zoom (2000):
+#
+#     strength: 0.4
+#
+# directional (1000):
+#
+#     direction: [0.0, 1.0]
+#
+# directional-scaled (1000):
+#
+#     direction: [0.0, 1.0]
+#     scale: 0.7
+#
+# directional-wipe (1000):
+#
+#     direction: [1.0, -1.0]
+#     smoothness: 0.5
+#
+# dissolve (1000):
+#
+#     line-width: 0.1
+#     spread-clr: [1.0, 0.0, 0.0]
+#     hot-clr: [0.9, 0.9, 0.2]
+#     intensity: 1.0
+#     pow: 5.0
+#
+# doom (2000):
+#
+#     bars: 30
+#     amplitude: 2.0
+#     noise: 0.1
+#     frequency: 0.5
+#     drip-scale: 0.5
+#
+# doorway (1500):
+#
+#     reflection: 0.4
+#     perspective: 0.4
+#     depth: 3.0
+#
+# dreamy (1500)
+# dreamy-zoom (1500):
+#
+#     rotation: 6.0
+#     scale: 1.2
+#
+# edge (1500):
+#
+#     thickness: 0.001
+#     brightness: 8.0
+#
+# fade (300)
+# film-burn (2000):
+#
+#     seed: 2.31
+#
+# glitch-displace (1500)
+# glitch-memories (1500)
+# grid-flip (1500):
+#
+#     size: [4, 4]
+#     pause: 0.1
+#     divider-width: 0.05
+#     bgcolor: [0.0, 0.0, 0.0, 1.0]
+#     randomness: 0.1
+#
+# hexagonalize (2000):
+#
+#     steps: 50
+#     horizontal-hexagons: 20.0
+#
+# horizontal-close (2000)
+# horizontal-open (2000)
+# inverted-page-curl (2000)
+# left-right (2000)
+# linear-blur (800):
+#
+#     intensity: 0.1
+#
+# mosaic (2000):
+#
+#     endx: 2
+#     endy: -1
+#
+# overexposure (2000)
+# pixelize (1500):
+#
+#     squares-min: [20, 20]
+#     steps: 50
+#
+# polkan-dots-curtain (2000):
+#
+#     dots: 20.0
+#     center: [0.0, 0.0]
+#
+# radial (1500):
+#
+#     smoothness: 1.0
+#
+# rectangle (2000):
+#
+#     bgcolor: [0.0, 0.0, 0.0, 1.0]
+#
+# ripple (1500):
+#
+#     amplitude: 100.0
+#     speed: 50.0
+#
+# rolls (2000):
+#
+#     rolls-type: 0
+#     rot-down: false
+#
+# rotate-scale-fade (1500):
+#
+#     center: [0.0, 0.5]
+#     rotations: 1.0
+#     scale: 8.0
+#     back-color: [0.15, 0.15, 0.15, 1.0]
+#
+# rotate-scale-vanish (1500):
+#
+#     fade-in-second: true
+#     reverse-effect: false
+#     reverse-rotation: false
+#
+# simple-zoom (1500):
+#
+#     zoom-quickness: 0.8
+#
+# slides (1500):
+#
+#     slides-type: 0
+#     slides-in: false
+#
+# static-fade (1500):
+#
+#     n-noise-pixels: 200.0
+#     static-luminisotiy: 0.8
+#
+# stereo-viewer (2000):
+#
+#     zoom: 0.88
+#     corner_radius: 0.22
+#
+# swirl (1500)
+# tv-static (1000):
+#
+#     offset: 0.05
+#
+# water-drop (1500):
+#
+#     amplitude: 30.0
+#     speed: 30.0
+#
+# window-blinds (1500)

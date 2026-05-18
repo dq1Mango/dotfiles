@@ -1,0 +1,89 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "reload_style_on_change": true,
+  "modules-left": ["custom/notification", "clock", "tray"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["network", "cpu", "memory", "temperature", "custom/endpoint"],
+  "margin-top": 0,
+  "margin-left": 20,
+  "margin-bottom": 20,
+  "margin-right": 20,
+  "spacing": 20,
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": "",
+    },
+    //"persistent-workspaces": {
+    //  "*": [1, 2, 3, 4, 5],
+    //},
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "",
+    "on-click": "swaync-client -t -sw",
+    "escape": true,
+  },
+  "clock": {
+    "format": "{:%I:%M:%S %p} ",
+    "interval": 1,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#fAfBfC'><b>{}</b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "shift_down",
+      "on-click": "shift_up",
+    },
+  },
+  "network": {
+    "interface": "enp42s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{bandwidthUpBits} - {bandwidthDownBits}󰊗 ",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "spacing": 100,
+  },
+  "custom/expand": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/endpoint": {
+    "format": "|",
+    "tooltip": false,
+  },
+
+  "custom/colorpicker": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": "once",
+    "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
+    "on-click": "~/.config/waybar/scripts/colorpicker.sh",
+    "signal": 1,
+  },
+  "cpu": {
+    "format": "{load}/{usage}%",
+  },
+  "memory": {
+    "interval": 30,
+    "format": "{used:0.1f}G/{total:0.1f}G ",
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "",
+  },
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10,
+  },
+}

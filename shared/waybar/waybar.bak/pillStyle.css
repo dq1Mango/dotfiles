@@ -1,0 +1,125 @@
+@import "mocha.css";
+
+* {
+  /*font-family: DejaVuSansM Nerd Font;*/
+  font-size: 16px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+
+  /*margin: 1rem 1rem;*/
+}
+
+#workspaces {
+  /*font-family: DroidSansMonooooo*/
+}
+/*#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left: 1rem;
+}*/
+
+#workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.active {
+  color: @sky;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+  
+#workspaces, #network, #memory, #custom-music, #clock, #cpu, #battery, #pulseaudio, #pulseaudio-slider, #temperature {
+  background-color: alpha(@base, 0.7);
+  border: 2px solid @lavender;
+  border-radius: 20px;
+  padding: 2px 10px 2px 15px;
+  margin: 0px 5px;
+
+  /*margin: 5px 0;*/
+}
+
+#
+
+#network.focused {
+  border: 2px solid @maroon;
+}
+
+#clock.cal {
+  margin-left: 0px;
+}
+
+#memory {
+  margin-right:0px
+}
+
+/*#pulseaudio {
+  color: @maroon;
+  margin-right: 0px;
+  border-radius: 20px 0px 0px 20px;
+  border-right: none;
+}
+
+#pulseaudio-slider {
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 30px;
+  border-radius: 0rem 20px 20px 0rem;
+  border-left: none;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 40px;
+    border-radius: 5px;
+    border: none; 
+    background-color: @crust;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: @green;
+}*/
+/*#clock {
+  border-radius: 1rem 1rem 1rem 1rem;
+  margin-right: 1rem;
+}*/
+
+
+#battery {
+  color: @text;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
+}
+
