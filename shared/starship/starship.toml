@@ -49,6 +49,7 @@ symbol = " "
 
 [gcloud]
 symbol = "  "
+detect_env_vars = ["GCLOUD_ACTIVE"]
 
 [git_branch]
 symbol = " "
