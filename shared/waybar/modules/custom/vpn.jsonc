@@ -1,7 +1,7 @@
 {
   "custom/vpn": {
     // "exec": "~/.config/waybar/scripts/theme-switcher.sh",
-    "exec": "~/.scripts/vpn.sh",
+    "exec": "~/.config/waybar/scripts/vpn.sh",
     // "exec-if":
     // "exec-on-event":
     // "hide-empty-text":
