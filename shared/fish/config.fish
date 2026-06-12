@@ -4,12 +4,15 @@ set -gx tabsize 2
 
 set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
 
+set -gx GOPATH $HOME/.local/share/go
+
 # additions to path 
 fish_add_path ~/.scripts/
 fish_add_path ~/.cargo/bin/
 fish_add_path ~/.local/bin/
+fish_add_path ~/.local/share/go/bin/
 
-fish_add_path ~/.thingsIWantOnPath/
+# fish_add_path ~/.thingsIWantOnPath/
 
 # command aliases
 # 

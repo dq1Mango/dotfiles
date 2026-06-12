@@ -1,13 +1,13 @@
 #!/usr/bin/env fish
 
-# @fish-lsp-enable 
+# #@fish-lsp-enable 
 # this script must be sourced or ran with ". /script.fish" syntax to set env vars of user shell
 
 # address to the proxy server
 set PROXY "http://127.0.0.1:8080"
 
 # path to the root certificate autority
-set CERT_PATH "/home/mqngo/Downloads/mitmproxy-ca-cert.pem"
+set CERT_PATH /home/mqngo/.mitmproxy/mitmproxy-ca-cert.pem
 
 # set a bunch of env vars to hopefully coerce the terminal to use the proxy 
 export HTTP_PROXY=$PROXY
