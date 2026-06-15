@@ -204,7 +204,7 @@ hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd('hyprctl "dispatch layoutmsg togglesplit"'))
+hl.bind(mainMod .. " + P", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + BACKSPACE", hl.dsp.exec_cmd("fnottctl dismiss"))
 -- hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "", action = "toggle" }))
 
