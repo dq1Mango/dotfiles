@@ -194,6 +194,10 @@ hl.device({
   sensitivity = -0.5,
 })
 
+--##################
+--## KEYBINDINGS ###
+--##################
+
 local mainMod = "ALT" -- Sets ALT key as main modifier
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
@@ -295,6 +299,10 @@ hl.bind(
 )
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e2 -n4 set 5%+"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e2 -n4 set 5%-"), { locked = true, repeating = true })
+
+--#############################
+--## WINDOWS AND WORKSPACES ###
+--#############################
 
 hl.workspace_rule({
   workspace = "1",
@@ -491,44 +499,6 @@ hl.config({
   },
   --
   -- gesture = 3, horizontal, workspace
-  --##################
-  --## KEYBINDINGS ###
-  --##################
-  -- See https://wiki.hyprland.org/Configuring/Keywords/
-  -- Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-  --bind = $mainMod, P, pseudo, # dwindle
-  -- bind = $mainMod, P, layoutmsg, togglesplit, # dwindle
-  -- idk why the above bind doesn't work but below is a hack of sorts that does
-  -- bind = $mainMod, P, exec, echo "hi" > "/home/mqngo/bruh" # dwindle
-  --bind = $mainMod, BACKSPACE, exec, dunstctl close
-  -- Hyprshot
-  --bind = Shift, PRINT, exec, hyprshot -m window
-  -- Cycle wallpaper
-  -- Move focus with mainMod + arrow keys
-  -- Switch workspaces with mainMod + [0-9]
-  -- Tab over workspaces
-  -- Move active window to a workspace with mainMod + SHIFT + [0-9]
-  -- Example special workspace (scratchpad)
-  -- Scroll through existing workspaces with mainMod + scroll
-  -- Move/resize windows with mainMod + LMB/RMB and dragging
-  -- Multimedia control with a 60% keyboard
-  -- Multimedia control with a 60% keyboard
-  -- Requires playerctl
-  -- toogle the gaming layout
-  -- Laptop multimedia keys for volume and LCD brightness
-  --#############################
-  --## WINDOWS AND WORKSPACES ###
-  --#############################
-  -- See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-  -- See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
-  -- Example windowrule
-  -- windowrule = float,class:^(kitty)$,title:^(kitty)$
-  -- workspace = 10, monitor:eDP-8
-  -- workspace = 10, monitor:DP-9
-  -- workspace = 10, monitor:DP-9
-  -- Ignore maximize requests from apps. You'll probably like this.
-  -- Fix some dragging issues with XWayland
-  --float pulseaudio client
   -- unscale XWayland
   xwayland = {
     force_zero_scaling = true,
@@ -536,23 +506,21 @@ hl.config({
   -- toolkit-specific scale
   -- windowrule {, class:org.pulseaudio.pavucontrol title:Volume Control }#float pulseaudio client
   --windowrule = float, class:org.pulseaudio.pavucontrol title:Volume Control #float pulseaudio client
-  --################
-  --## AUTOSTART ###
-  --################
-  -- Autostart necessary processes (like notifications daemons, status bars, etc.)
-  -- Or execute your favorite apps at launch like this:
   --start polkit
-  -- exec-once = systemctl --user start hyprpolkitagent
-  -- exec-once = waybar
-  -- exec-once = waybar & hyprpaper & firefox
-  -- exec-once = lua ~/.config/hypr/otherCycle.lua
-  -- Start Hyprlock on startup to act as a pseudo Display Manager that is much faster
 })
+
+--################
+--## AUTOSTART ###
+--################
+-- Autostart necessary processes (like notifications daemons, status bars, etc.)
+-- Or execute your favorite apps at launch like this:
 
 hl.on("hyprland.start", function()
   hl.exec_cmd("hypridle")
   hl.exec_cmd("fnott")
-  hl.exec_cmd(terminal .. " --command fish -C fastfetch")
+  hl.exec_cmd(terminal .. " -e fish -C fastfetch")
   hl.exec_cmd("wpaperd -d")
+  -- exec-once = systemctl --user start hyprpolkitagent
+  -- Start Hyprlock on startup to act as a pseudo Display Manager that is much faster
   hl.exec_cmd("hyprlock")
 end)
