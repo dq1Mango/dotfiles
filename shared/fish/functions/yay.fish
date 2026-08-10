@@ -1,11 +1,11 @@
 function yay
-    argparse R/remove 'r/revision=' -- $argv
-
-    set -l revision nixos-unstable
-
-    if set -ql _flag_revision
-        set -l revision $_flag_revision
-    end
+    # argparse R/remove 'r/revision=' -- $argv
+    #
+    # # set -l revision nixos-unstable
+    #
+    # if set -ql _flag_revision
+    #     set revision $_flag_revision
+    # end
 
     set package $argv[-1]
 
@@ -13,6 +13,6 @@ function yay
         echo removing
         nix profile remove $package
     else
-        nix profile add nixpkgs/$revision\#$package
+        nix profile add nixpkgs\#$package
     end
 end

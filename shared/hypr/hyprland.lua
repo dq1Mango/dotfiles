@@ -342,16 +342,19 @@ hl.workspace_rule({
 hl.workspace_rule({
   workspace = "8",
   monitor = "DP-7",
+  -- monitor = "DP-8",
 })
 
 hl.workspace_rule({
   workspace = "9",
   monitor = "DP-7",
+  -- monitor = "DP-8",
 })
 
 hl.workspace_rule({
   workspace = "10",
   monitor = "DP-7",
+  -- monitor = "DP-8",
 })
 
 hl.window_rule({
