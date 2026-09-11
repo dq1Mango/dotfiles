@@ -10,12 +10,12 @@ os.execute("sleep 1")
 local handle = io.popen("wpaperctl get " .. monitor)
 local current
 if handle ~= nil then
-  current = handle:read("*a")
-  current = string.gsub(current, "%s", "")
-  print(current)
+	current = handle:read("*a")
+	current = string.gsub(current, "%s", "")
+	print(current)
 else
-  print("cannot read wallpapers directory")
-  os.exit()
+	print("cannot read wallpapers directory")
+	os.exit()
 end
 
 local command = "ln -sf " .. current .. " " .. directory .. "wallpaper"
