@@ -1,6 +1,6 @@
 function yay
-    # argparse R/remove 'r/revision=' -- $argv
-    #
+    argparse R/remove -- $argv
+
     # # set -l revision nixos-unstable
     #
     # if set -ql _flag_revision

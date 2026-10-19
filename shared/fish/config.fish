@@ -36,3 +36,5 @@ starship init fish | source
 
 # load zoxide (better cd)
 zoxide init fish | source
+
+pokemon-colorscripts --no-title --random --big
