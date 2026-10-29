@@ -336,7 +336,7 @@ hl.workspace_rule({
 
 hl.workspace_rule({
   workspace = "7",
-  monitor = "eDP-1",
+  monitor = "DP-7",
 })
 
 hl.workspace_rule({
