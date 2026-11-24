@@ -188,8 +188,8 @@ hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("lua ~/.config/hypr/otherCycle.lua"))
 
 -- hl.bind("META + j", hl.dsp.exec_cmd("/home/mqngo/.local/share/go/bin/whisper-linux start"))
-hl.bind("delete", hl.dsp.exec_cmd("whisper-linux start"))
-hl.bind("SHIFT + delete", hl.dsp.exec_cmd("whisper-linux stop"))
+hl.bind("delete", hl.dsp.exec_cmd("whisper-linux toggle"))
+-- hl.bind("SHIFT + delete", hl.dsp.exec_cmd("whisper-linux stop"))
 
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
